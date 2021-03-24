@@ -38,5 +38,5 @@ npm run build
 - [github@1lugesya](https://github.com/1lugesya)
 - [github@burakerturk16](https://github.com/burakerturk16)
 - [github@fundagorgulu](https://github.com/fundagorgulu)
-- [github@kerimylcn](https://github.com/kerimylncn)
+- [github@kerimylcn](https://github.com/kerimylcn)
 - [github@serhanelmali](https://github.com/serhanelmali)
