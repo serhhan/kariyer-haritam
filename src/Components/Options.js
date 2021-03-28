@@ -3,15 +3,15 @@ import React from "react";
 const Options = ({handleIndex, calculatePoint, fields, index}) => {
 
   return (
-    <div>
+<div>
       <button  onClick={() => { handleIndex();
-                                calculatePoint(fields[index],4)}}>A (her zaman)</button>
+                                calculatePoint(fields[index],4)}}>Her zaman</button>
       <button  onClick={() =>{ handleIndex(); 
-                               calculatePoint(fields[index],3)}}>B</button>
+                               calculatePoint(fields[index],3)}}>Sık Sık</button>
       <button  onClick={() => { handleIndex(); 
-                                calculatePoint(fields[index],2)}}>C</button>
+                                calculatePoint(fields[index],2)}}>Ara Sıra</button>
       <button  onClick={() => { handleIndex(); 
-                                calculatePoint(fields[index],1)}}>D</button>
+                                calculatePoint(fields[index],1)}}>Hiçbir Zaman</button>
     </div>
   );
 };
