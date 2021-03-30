@@ -1,0 +1,42 @@
+$text-color: #fff;
+$bg-color: #4B9F6B;
+
+.texts{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    background: $bg-color;
+    height: 85vh;   
+
+    h1{
+        font-size:64px;
+        color: $text-color;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    h2{
+        font-size: 36px;
+        color: $text-color;
+        text-align: center;
+        font-weight: 300;
+        padding-bottom: 110px;
+    }
+
+    button{
+        width: 15rem;
+        height: 4rem;
+        border-radius: 30px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        span{
+            font-family: 'Montserrat', sans-serif;
+            color: $text-color;
+        }
+    }
+}

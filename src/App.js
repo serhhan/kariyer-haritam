@@ -1,10 +1,11 @@
 import react,{ useState } from 'react';
 import data from './Questions';
-import './App.css';
+import './App.scss';
 import QuestionContainer from "./Components/QuestionContainer";
 import Home from "./Components/Home";
 import Results from "./Components/Results";
-import Navbar from "./Components/Navbar/Navbar"
+import Navbar from "./Components/Navbar/Navbar";
+import Homepage from "./Components/Homepage/Homepage";
 
 function App() {
 
@@ -95,7 +96,8 @@ function App() {
   };
   return (
   <div>
-    <Navbar />
+     <Navbar />
+     <Homepage />
       {startGame ? "" : <Home handleStartGame={handleStartGame} />}
       {startGame && index < questions.length ? (
         <QuestionContainer
