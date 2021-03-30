@@ -4,6 +4,7 @@ import './App.css';
 import QuestionContainer from "./Components/QuestionContainer";
 import Home from "./Components/Home";
 import Results from "./Components/Results";
+import Navbar from "./Components/Navbar/Navbar"
 
 function App() {
 
@@ -94,6 +95,7 @@ function App() {
   };
   return (
   <div>
+    <Navbar />
       {startGame ? "" : <Home handleStartGame={handleStartGame} />}
       {startGame && index < questions.length ? (
         <QuestionContainer

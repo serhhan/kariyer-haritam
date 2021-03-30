@@ -1,0 +1,54 @@
+$nav-color: #fff;
+$a-color: #000;
+$hover-bg: #000;
+$hover-color: #fff;
+$icon-hover-bg: #fff;
+
+nav{
+    font-family: 'Montserrat', sans-serif;
+    
+    .nav-list{
+        box-shadow: 0px 0px 10px;
+        background: $nav-color;
+        margin: 0;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        
+
+        .nav-item{
+            list-style:none;
+            margin-right: 2rem;
+            cursor: pointer;
+            transition: all 200ms ease-in;
+
+            a{
+                text-decoration: none;
+                color: $a-color;
+            }
+
+            &:first-child{
+                margin: 0 auto 0 2rem;
+                &:hover{background: $icon-hover-bg}
+            }
+
+            &:last-child{
+                padding: 0.5rem 1rem;
+                &:hover{background: $icon-hover-bg}
+            }
+
+            &:hover{
+                background: $hover-bg;
+                color: $hover-color;
+
+                //colorın fixlenmesi lazım.
+            }
+
+        }
+    }
+}
+
+
+
