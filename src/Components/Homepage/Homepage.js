@@ -9,7 +9,7 @@ const Homepage = () => {
             <h2>Donec interdum nulla nec nisl suscipit<br/> tristique. Vestibulum eget faucibus mauris.</h2>
             <button>
                 <span>Haritaya Git</span>
-                <i class="far fa-arrow-alt-circle-right"></i>
+                <i class="far fa-arrow-alt-circle-right fa-3x"></i>
             </button>
         </div>
     )

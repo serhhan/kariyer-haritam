@@ -1,5 +1,7 @@
 $text-color: #fff;
 $bg-color: #4B9F6B;
+$button-color: #2dc166b7;
+$arrow-color: #fff;
 
 .texts{
     font-family: 'Montserrat', sans-serif;
@@ -22,20 +24,36 @@ $bg-color: #4B9F6B;
         color: $text-color;
         text-align: center;
         font-weight: 300;
-        padding-bottom: 110px;
+        padding-bottom: 100px;
     }
 
     button{
         width: 15rem;
         height: 4rem;
+        border: none;
         border-radius: 30px;
         display:flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: center;
+        background: $button-color;
+        box-shadow: -2px 5px 8px;
+        cursor:pointer;
+
+        //hover + active + focus değişiklikleri eklenecek, + animasyon.
+
+        *{
+            margin-right: 1rem;
+        }
+
+        .fa-arrow-alt-circle-right{
+            color: $arrow-color;
+        }
 
         span{
             font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
             color: $text-color;
         }
     }
