@@ -13,8 +13,12 @@ const QuestionContainer = ({
 }) => {
   return (
     <div className="question-container">
-      <Question question={question} index = {index}/>
-      <Options handleIndex = {handleIndex} calculatePoint = {calculatePoint} fields = {fields} index ={index}/>
+      <div className="question">
+       <Question question={question} index = {index}/>
+      </div>
+      <div className="option">
+        <Options handleIndex = {handleIndex} calculatePoint = {calculatePoint} fields = {fields} index ={index}/>
+      </div>
     </div>
   );
 };
