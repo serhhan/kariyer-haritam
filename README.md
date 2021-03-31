@@ -21,18 +21,6 @@ npm run start
 npm run build
 ```
 
-## TODO LIST
-
-> check the todos if you fix it.
-
-- [ ] Homepage
-
-- [ ] Quiz Page
-
-  - [ ] Listing questions and keeping their values in state
-
-- [ ] Result Page
-
 ## Authors:
 
 - [github@1lugesya](https://github.com/1lugesya)
