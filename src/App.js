@@ -3,8 +3,9 @@ import data from './Questions';
 import './App.scss';
 import QuestionContainer from "./Components/QuestionContainer/QuestionContainer";
 import QuestionIndex from "./Components/QuestionIndex/QuestionIndex";
-import Results from "./Components/Results";
+import Results from "./Components/Results/Results";
 import Navbar from "./Components/Navbar/Navbar";
+import AboutUs from "./Components/AboutUs/AboutUs";
 import Homepage from "./Components/Homepage/Homepage";
 
 function App() {
@@ -111,14 +112,17 @@ function App() {
         ) : (
           ""
         )}
-      {index === 170 ? <Results  sozelPoint = {sozelPoint} sayisalPoint = {sayisalPoint} 
+      {index === 170 ? <div className="results"> 
+                        <Results  sozelPoint = {sozelPoint} sayisalPoint = {sayisalPoint} 
                                   uzayPoint = {uzayPoint} gozElKPoint = {gozElKPoint}  fenPoint = {fenPoint}  
                                   sosyalPoint = {sosyalPoint} iknaPoint = {iknaPoint} dilPoint = {dilPoint}
                                   ticaretPoint = {ticaretPoint} ziraatPoint = {ziraatPoint} mekanikPoint ={mekanikPoint}  
                                   isAyrintiPoint = {isAyrintiPoint} edebiyatPoint = {edebiyatPoint}  sanatPoint = {sanatPoint} 
-                                  muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} /> : ""}
+                                  muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} />  
+                       </div> : ""}
                                 
       </div>
+      <AboutUs />
   </div>
   );
 

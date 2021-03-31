@@ -7,6 +7,7 @@ $icon-hover-bg: #fff;
 nav{
     font-family: 'Montserrat', sans-serif;
     position: fixed;
+    z-index: 2;
     width: 100%;
     
     
@@ -29,6 +30,12 @@ nav{
             a{
                 text-decoration: none;
                 color: $a-color;
+
+                &:hover{
+                color: $hover-color;
+                }
+
+
             }
 
             &:first-child{
@@ -43,9 +50,9 @@ nav{
 
             &:hover{
                 background: $hover-bg;
-                color: $hover-color;
+                
 
-                //colorın fixlenmesi lazım.
+                //ikon colorını fixle. hover animasyonu yap.
                 //scroll'da navbar rengi değişecek
             }
 

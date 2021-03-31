@@ -1,17 +1,18 @@
 import React from "react";
+import './Options.scss';
 
 const Options = ({handleIndex, calculatePoint, fields, index}) => {
 
   return (
 <div>
       <button  onClick={() => { handleIndex();
-                                calculatePoint(fields[index],4)}}>Her zaman</button>
+                                calculatePoint(fields[index],4)}}><div className="btn-in"></div></button>
       <button  onClick={() =>{ handleIndex(); 
-                               calculatePoint(fields[index],3)}}>Sık Sık</button>
+                               calculatePoint(fields[index],3)}}><div className="btn-in"></div></button>
       <button  onClick={() => { handleIndex(); 
-                                calculatePoint(fields[index],2)}}>Ara Sıra</button>
+                                calculatePoint(fields[index],2)}}><div className="btn-in"></div></button>
       <button  onClick={() => { handleIndex(); 
-                                calculatePoint(fields[index],1)}}>Hiçbir Zaman</button>
+                                calculatePoint(fields[index],1)}}><div className="btn-in"></div></button>
     </div>
   );
 };

@@ -46,14 +46,23 @@ $btn-color: rgba(0, 0, 0, 0.466);
     }
 
     button{
-        width:10rem;
+        width:5rem;
         height: 3rem;
         margin: 2rem 0 0 0;
-        border-radius: 20px;
+        border-radius: 10px;
         border:none;
         background: $btn-color;
+        transition: all 500ms ease-out;
+        outline:none;
+        cursor: pointer;
 
-        //hover vs animasyonlar eklenecek
+        &:hover{
+            width: 10rem;
+            border: 1px solid rgba(0, 0, 0, 0.521);
+            border-radius: 40px;
+        }
+
+        //animasyonlar eklenecek, buton gölgelendir. active de boyut küçülecek(basma hissiyatı eklenecek)
 
         span{
             font-family: 'Montserrat', sans-serif;

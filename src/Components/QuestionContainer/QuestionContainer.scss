@@ -4,11 +4,18 @@ $font-color: white;
 $btn-color: rgba(0, 0, 0, 0.466);
 $btn-color2: rgba(56, 56, 56, 0.466);
 
+
+//seçim noktalarının üstüne seçenekler yazılacak. active de boyut küçülecek(basma hissiyatı eklenecek)
+
 .question-container{
     display:flex;
     flex-direction: column;
+    border: 2px solid rgba(0, 0, 0, 0.1 );
+    border-radius: 40px 40px 30px 30px; 
 
     .question{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
         display:flex;
         position: relative;
         z-index: 1;
@@ -18,12 +25,12 @@ $btn-color2: rgba(56, 56, 56, 0.466);
         backdrop-filter: blur(20px);
         color: $font-color;
         border-radius: 40px;
-        padding: 4rem 4rem 2rem 4rem;
+        padding: 2rem 4rem 2rem 4rem;
     }
 
     .option{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         width: 100%;
         margin-top: -3rem;
@@ -35,19 +42,23 @@ $btn-color2: rgba(56, 56, 56, 0.466);
         button{
             width: 3rem;
             height: 3rem;
-            margin: 0px 30px 0px 10px;
+            margin: 0px 30px 0px 30px;
             border-radius: 50%;
             border:none;
             background: $btn-color;
             color: $font-color;
-            transition: all 1s;
+            transition: all 500ms ease-out;
+            outline:none;
+            cursor: pointer;
 
             &:hover{
                 width: 5rem;
                 border-radius: 40px;
                 margin-top: 1rem;
-                background: black;
+                height: 2.5rem;
+                border: 3px solid black;
             }
+
         }
     }
 }

@@ -12,7 +12,7 @@ const QuestionIndex = ({ handleStartGame }) => (
       </div>
       <div className="secondContainer">
         <button onClick={handleStartGame}>
-          <span>Start Quiz</span>
+          <span>Start</span>
         </button>
       </div>
     </div>
