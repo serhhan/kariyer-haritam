@@ -1,6 +1,7 @@
 $bg-color:linear-gradient(157.61deg, rgba(0, 0, 0, 0.8) 14.53%, rgba(0, 0, 0, 0.3) 89.08%);
 $bg-color2: linear-gradient(157.61deg, rgba(255, 255, 255, 0.8) 14.53%, rgba(255, 255, 255, 0.3) 89.08%);
 $font-color: white;
+$btn-color: rgba(0, 0, 0, 0.466);
 
 .IndexContainer{
     
@@ -8,6 +9,8 @@ $font-color: white;
     display:flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.1 );
+    border-radius: 40px 40px 30px 30px;
     
     .firstContainer{
         display:flex;
@@ -16,7 +19,7 @@ $font-color: white;
         flex-direction: column;
         align-items: center;
         background: $bg-color;
-        backdrop-filter: blur(40px);
+        backdrop-filter: blur(20px);
         color: $font-color;
         border-radius: 40px;
         padding: 4rem 4rem 2rem 4rem;
@@ -48,5 +51,15 @@ $font-color: white;
         margin: 2rem 0 0 0;
         border-radius: 20px;
         border:none;
+        background: $btn-color;
+
+        //hover vs animasyonlar eklenecek
+
+        span{
+            font-family: 'Montserrat', sans-serif;
+            color: $font-color;   
+            font-size: 18px;
+            font-weight: 500;
+        }
     }
 }
