@@ -1,26 +1,52 @@
 $bg-color:linear-gradient(157.61deg, rgba(0, 0, 0, 0.8) 14.53%, rgba(0, 0, 0, 0.3) 89.08%);
+$bg-color2: linear-gradient(157.61deg, rgba(255, 255, 255, 0.8) 14.53%, rgba(255, 255, 255, 0.3) 89.08%);
 $font-color: white;
 
 .IndexContainer{
-    padding: 50px;
+    
     font-family: 'Montserrat', sans-serif;
     display:flex;
     flex-direction: column;
     align-items: center;
-    background: $bg-color;
-    backdrop-filter: blur(40px);
-    color: $font-color;
-    border-radius: 40px;
     
+    .firstContainer{
+        display:flex;
+        position: relative;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        background: $bg-color;
+        backdrop-filter: blur(40px);
+        color: $font-color;
+        border-radius: 40px;
+        padding: 4rem 4rem 2rem 4rem;
+    }
+
+    .secondContainer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: -3rem;
+        padding: 2rem 0 1rem 0;
+        border-radius: 0 0 30px 30px;
+        background: $bg-color2;
+    }
+
+    
+
     h1{
         margin:0;
     }
 
     p{
-        padding: 1rem 0 0rem 0;
+        padding: 1rem 0 0 0;
     }
 
     button{
-
+        width:10rem;
+        height: 3rem;
+        margin: 2rem 0 0 0;
+        border-radius: 20px;
+        border:none;
     }
 }
