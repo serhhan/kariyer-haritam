@@ -1,8 +1,8 @@
 import react,{ useState } from 'react';
 import data from './Questions';
 import './App.scss';
-import QuestionContainer from "./Components/QuestionContainer";
-import Home from "./Components/Home";
+import QuestionContainer from "./Components/QuestionContainer/QuestionContainer";
+import QuestionIndex from "./Components/QuestionIndex/QuestionIndex";
 import Results from "./Components/Results";
 import Navbar from "./Components/Navbar/Navbar";
 import Homepage from "./Components/Homepage/Homepage";
@@ -98,24 +98,27 @@ function App() {
   <div>
      <Navbar />
      <Homepage />
-      {startGame ? "" : <Home handleStartGame={handleStartGame} />}
-      {startGame && index < questions.length ? (
-        <QuestionContainer
-          {...questions[index]}
-          handleIndex={handleIndex}
-          index = {index}
-          calculatePoint ={calculatePoint}
-          fields = {fields}
-        />
-      ) : (
-        ""
-      )}
-     {index === 170 ? <Results  sozelPoint = {sozelPoint} sayisalPoint = {sayisalPoint} 
-                                uzayPoint = {uzayPoint} gozElKPoint = {gozElKPoint}  fenPoint = {fenPoint}  
-                                sosyalPoint = {sosyalPoint} iknaPoint = {iknaPoint} dilPoint = {dilPoint}
-                                ticaretPoint = {ticaretPoint} ziraatPoint = {ziraatPoint} mekanikPoint ={mekanikPoint}  
-                                isAyrintiPoint = {isAyrintiPoint} edebiyatPoint = {edebiyatPoint}  sanatPoint = {sanatPoint} 
-                                muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} /> : ""}
+     <div className ="QuestionArea">
+        {startGame ? "" : <QuestionIndex handleStartGame={handleStartGame} />}
+        {startGame && index < questions.length ? (
+          <QuestionContainer
+            {...questions[index]}
+            handleIndex={handleIndex}
+            index = {index}
+            calculatePoint ={calculatePoint}
+            fields = {fields}
+          />
+        ) : (
+          ""
+        )}
+      {index === 170 ? <Results  sozelPoint = {sozelPoint} sayisalPoint = {sayisalPoint} 
+                                  uzayPoint = {uzayPoint} gozElKPoint = {gozElKPoint}  fenPoint = {fenPoint}  
+                                  sosyalPoint = {sosyalPoint} iknaPoint = {iknaPoint} dilPoint = {dilPoint}
+                                  ticaretPoint = {ticaretPoint} ziraatPoint = {ziraatPoint} mekanikPoint ={mekanikPoint}  
+                                  isAyrintiPoint = {isAyrintiPoint} edebiyatPoint = {edebiyatPoint}  sanatPoint = {sanatPoint} 
+                                  muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} /> : ""}
+                                
+      </div>
   </div>
   );
 

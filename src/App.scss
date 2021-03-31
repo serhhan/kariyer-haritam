@@ -1,5 +1,17 @@
 $index-bg: #4B9F6B;
+$bg-color: #BBC06D;
 
 body {
   margin: 0;
+}
+
+.QuestionArea{
+  background: $bg-color;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  height: 85vh;   
 }
