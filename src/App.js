@@ -32,6 +32,26 @@ function App() {
   const [muzikPoint, setMuzikPoint] = useState(0);
   const [sosyalYardimPoint, setSosyalYardimPoint] = useState(0);
 
+  const restartTest = () => {
+    setIndex(0);
+    setSozelPoint(0);
+    setSayisalPoint(0);
+    setUzayPoint(0);
+    setGozElKPoint(0);
+    setFenPoint(0);
+    setSosyalPoint(0);
+    setIknaPoint(0);
+    setDilPoint(0);
+    setTicaretPoint(0);
+    setZiraatPoint(0);
+    setMekanikPoint(0);
+    setIsAyrintiPoint(0);
+    setEdebiyatPoint(0);
+    setSanatPoint(0);
+    setMuzikPoint(0);
+    setSosyalYardimPoint(0);
+
+  }
   const handleStartGame = () => {
     setStartGame(!startGame);
   };
@@ -118,7 +138,7 @@ function App() {
                                   sosyalPoint = {sosyalPoint} iknaPoint = {iknaPoint} dilPoint = {dilPoint}
                                   ticaretPoint = {ticaretPoint} ziraatPoint = {ziraatPoint} mekanikPoint ={mekanikPoint}  
                                   isAyrintiPoint = {isAyrintiPoint} edebiyatPoint = {edebiyatPoint}  sanatPoint = {sanatPoint} 
-                                  muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} />  
+                                  muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} restartFunction = {restartTest}/>  
                        </div> : ""}
                                 
       </div>
