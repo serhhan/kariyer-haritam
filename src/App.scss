@@ -1,22 +1,21 @@
-$index-bg: #4B9F6B;
-$bg-color: #BBC06D;
+$index-bg: #865858;
+$bg-color: #beded8c9;
 
 body {
   margin: 0;
 }
 
-.QuestionArea{
+.QuestionArea {
   background: $bg-color;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
-  height: 85vh;   
+  height: 100vh;
 }
 
-.results{
+.results {
   display: flex;
   flex-direction: row-reverse;
 }

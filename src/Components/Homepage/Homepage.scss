@@ -1,60 +1,99 @@
 $text-color: #fff;
-$bg-color: #4B9F6B;
+$bg-color: #457d57;
 $button-color: #2dc166b7;
 $arrow-color: #fff;
 
-.texts{
-    font-family: 'Montserrat', sans-serif;
+header {
+  background: $bg-color;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+
+  h1 {
+    font-size: 64px;
+    color: $text-color;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: $text-color;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 100px;
+  }
+  p {
+    font-size: 24px;
+    color: $text-color;
+    padding: 0 30px 0 30px;
+    text-align: justify;
+    text-indent: 50px;
+  }
+
+  button {
+    padding: 10px 25px;
+    border-radius: 30px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 150px;
-    background: $bg-color;
-    height: 85vh;   
+    background: $button-color;
+    box-shadow: 0px 5px 15px #335e40;
+    outline: none;
+    border: 0;
 
-    h1{
-        font-size:64px;
-        color: $text-color;
-        text-align: center;
-        font-weight: 500;
+    //hover + active + focus değişiklikleri eklenecek, + animasyon (ok tıklandığında açılabilir).
+
+    .fa-arrow-alt-circle-right {
+      color: $arrow-color;
     }
 
-    h2{
-        font-size: 36px;
-        color: $text-color;
-        text-align: center;
-        font-weight: 300;
-        padding-bottom: 100px;
+    span {
+      font-size: 24px;
+      font-weight: 400;
+      color: $text-color;
+      margin-right: 1rem;
     }
-
-    button{
-        width: 15rem;
-        height: 4rem;
-        border: none;
-        border-radius: 30px;
-        display:flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        background: $button-color;
-        box-shadow: -2px 5px 8px;
-        cursor:pointer;
-
-        //hover + active + focus değişiklikleri eklenecek, + animasyon (ok tıklandığında açılabilir).
-
-        *{
-            margin-right: 1rem;
-        }
-
-        .fa-arrow-alt-circle-right{
-            color: $arrow-color;
-        }
-
-        span{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            font-weight: 400;
-            color: $text-color;
-        }
-    }
+  }
 }

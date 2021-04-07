@@ -4,7 +4,7 @@ const Question = ({ question, index }) => {
 
   return (
     <>
-      <p>{question} <span>{index+1}</span></p>
+      <p><span>{index+1}</span> - {question}</p>
     </>
   );
 };

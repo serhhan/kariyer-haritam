@@ -1,6 +1,8 @@
 import React from "react";
 import table from "../../NormTable"
 import ResultChart from "./ResultChart"
+
+
 function Results({ sozelPoint, sayisalPoint, uzayPoint, gozElKPoint, fenPoint, sosyalPoint, iknaPoint, dilPoint,
   ticaretPoint, ziraatPoint, mekanikPoint, isAyrintiPoint, edebiyatPoint, sanatPoint, muzikPoint, sosyalYardimPoint, restartFunction }) {
 
@@ -25,8 +27,9 @@ function Results({ sozelPoint, sayisalPoint, uzayPoint, gozElKPoint, fenPoint, s
                     muzikPercentage = {table[muzikPoint]["MÜZİK"]}
                     sosyalYardimPercentage = {table[sosyalYardimPoint]["SOSYAL YARD."]}/>
 
-        <button onClick = {restartFunction}>Play Again</button>
+        <button onClick = {restartFunction}>Başa Dön</button>
       </div>
+      
     </div>
   );
 }

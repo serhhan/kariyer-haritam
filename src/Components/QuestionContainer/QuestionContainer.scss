@@ -1,64 +1,67 @@
-$bg-color:linear-gradient(157.61deg, rgba(0, 0, 0, 0.8) 14.53%, rgba(0, 0, 0, 0.3) 89.08%);
-$bg-color2: linear-gradient(157.61deg, rgba(255, 255, 255, 0.8) 14.53%, rgba(255, 255, 255, 0.3) 89.08%);
+$bg-color: linear-gradient(
+  157.61deg,
+  rgba(0, 0, 0, 0.8) 14.53%,
+  rgba(0, 0, 0, 0.3) 89.08%
+);
+$bg-color2: linear-gradient(
+  157.61deg,
+  rgba(255, 255, 255, 0.8) 14.53%,
+  rgba(255, 255, 255, 0.3) 89.08%
+);
 $font-color: white;
 $btn-color: rgba(0, 0, 0, 0.466);
 $btn-color2: rgba(56, 56, 56, 0.466);
 
-
 //seçim noktalarının üstüne seçenekler yazılacak. active de boyut küçülecek(basma hissiyatı eklenecek)
 
-.question-container{
-    display:flex;
+.question-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  max-width: 900px;
+  max-height: 700px;
+
+  .question {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
     flex-direction: column;
-    border: 2px solid rgba(0, 0, 0, 0.1 );
-    border-radius: 40px 40px 30px 30px; 
+    align-items: center;
+    background: $bg-color;
+    backdrop-filter: blur(20px);
+    color: $font-color;
+    border-radius: 15px 15px 0 0;
+    padding: 3rem 4rem;
+  }
 
-    .question{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        display:flex;
-        position: relative;
-        z-index: 1;
-        flex-direction: column;
-        align-items: center;
-        background: $bg-color;
-        backdrop-filter: blur(20px);
-        color: $font-color;
-        border-radius: 40px;
-        padding: 2rem 4rem 2rem 4rem;
+  .option {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: -3rem;
+    padding: 5rem 0 2rem 0;
+    border-radius: 0 0 30px 30px;
+    background: $bg-color2;
+
+    button {
+      margin: 0px 30px 0px 30px;
+      padding: 30px;
+      font-size: 18px;
+      border-radius: 15px;
+      border: none;
+      background: $btn-color;
+      color: $font-color;
+      transition: all 100ms ease-out;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid black;
+        border-radius: 50px;
+      }
     }
-
-    .option{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        margin-top: -3rem;
-        padding: 5rem 0 2rem 0;
-        border-radius: 0 0 30px 30px;
-        background: $bg-color2;
-
-        
-        button{
-            width: 3rem;
-            height: 3rem;
-            margin: 0px 30px 0px 30px;
-            border-radius: 50%;
-            border:none;
-            background: $btn-color;
-            color: $font-color;
-            transition: all 500ms ease-out;
-            outline:none;
-            cursor: pointer;
-
-            &:hover{
-                width: 5rem;
-                border-radius: 40px;
-                margin-top: 1rem;
-                height: 2.5rem;
-                border: 3px solid black;
-            }
-
-        }
-    }
+  }
 }

@@ -1,67 +1,60 @@
-$bg-color: black;
+$bg-color: #0a2923c9;
 $font-color: white;
-$card-color: linear-gradient(249.92deg, rgba(240, 240, 240, 0.295) -11.78%, rgba(252, 252, 252, 0.3) 103.8%);
+$card-color: rgba(255, 255, 255, 0.1);
 
-.aboutUsContainer{
-    width: 100%;
-    height: 100vh;
-    background: $bg-color;
-    color: $font-color;
-    font-family: 'Montserrat', sans-serif;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.aboutUsContainer {
+  width: 100%;
+  height: 100vh;
+  background: $bg-color;
+  color: $font-color;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    h1{
-        font-size: 64px;
-        border-bottom: 1px solid white;
-        margin: 0 0 5rem 0;
-    }
+  h1 {
+    font-size: 64px;
+    border-bottom: 1px solid white;
+    margin: 0 0 5rem 0;
+  }
 
-    
-    .personCards{
+  .personCards {
+    display: flex;
+    flex-direction: row;
+
+    .Card {
+      background: $card-color;
+      padding: 1rem;
+      margin: 0 1rem 0 1rem;
+      backdrop-filter: blur(40px);
+      border-radius: 0px 100px 0px 50px;
+
+      .upperContainer {
         display: flex;
         flex-direction: row;
-      
-        .Card{
-            background: $card-color;
-            padding: 1rem;
-            margin: 0 1rem 0 1rem;
-            backdrop-filter: blur(40px);
-            border-radius: 0px 100px 0px 50px;
+        border-bottom: 1px solid white;
+        padding-bottom: 0.5rem;
 
-                .upperContainer{
+        .text-container {
+          display: flex;
+          flex-direction: column;
 
-                    display: flex;  
-                    flex-direction: row;
-                    border-bottom: 1px solid white;
-                    padding-bottom: 0.5rem;
-
-                    .text-container{
-                        display: flex;
-                        flex-direction: column; 
-
-                        span{
-                            margin: 10px 0 0 10px;
-                        }
-                    }
-
-
-                    img{
-                        border-radius: 50%;
-                        border: 1px solid white;
-                        width: 8vh;
-                    }
-                }
-
-                .info-text{
-                    padding: 10px 5px 5px 5px;
-                }
-
-
-            
+          span {
+            margin: 10px 0 0 10px;
+          }
         }
-    }   
-}
 
+        img {
+          border-radius: 50%;
+          border: 1px solid white;
+          width: 8vh;
+        }
+      }
+
+      .info-text {
+        padding: 10px 5px 5px 5px;
+      }
+    }
+  }
+}

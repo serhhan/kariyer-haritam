@@ -442,7 +442,7 @@ const data = [
         "field": "MEKANİK"
     },{
         "id":108,
-        "question":". Söz ve davranışlarınızın başkaları üzerindeki etkilerini öğrenmeye çalışır mısınız?",
+        "question":"Söz ve davranışlarınızın başkaları üzerindeki etkilerini öğrenmeye çalışır mısınız?",
         "field": "İKNA"
     },{
         "id":109,

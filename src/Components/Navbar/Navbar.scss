@@ -4,61 +4,49 @@ $hover-bg: #000;
 $hover-color: #fff;
 $icon-hover-bg: #fff;
 
-nav{
-    font-family: 'Montserrat', sans-serif;
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    
-    
-    .nav-list{
-        box-shadow: 0px 0px 10px;
-        background: $nav-color;
-        margin: 0;
-        padding: 1rem 0;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        
+nav {
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 
-        .nav-item{
-            list-style:none;
-            margin-right: 2rem;
-            cursor: pointer;
-            transition: all 200ms ease-in;
+  .nav-list {
+    box-shadow: 0px 0px 10px;
+    background: $nav-color;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-            a{
-                text-decoration: none;
-                color: $a-color;
+    .nav-item {
+      list-style: none;
+      margin-right: 2rem;
+      cursor: pointer;
+      transition: all 200ms ease-in;
 
-                &:hover{
-                color: $hover-color;
-                }
+      a {
+        text-decoration: none;
+        color: $a-color;
 
+        /* &:hover {
+          color: $hover-color;
+        } */
+      }
 
-            }
+      &:first-child {
+        margin: 0 auto 0 2rem;
+        /* &:hover {
+          background: $icon-hover-bg;
+        } */
+      }
 
-            &:first-child{
-                margin: 0 auto 0 2rem;
-                &:hover{background: $icon-hover-bg}
-            }
-
-            &:last-child{
-                padding: 0.5rem 1rem;
-                &:hover{background: $icon-hover-bg}
-            }
-
-            &:hover{
-                background: $hover-bg;
-                
-
-                //ikon colorını fixle. hover animasyonu yap.
-                //scroll'da navbar rengi değişecek
-            }
-
-        }
+      &:last-child {
+        padding: 0.5rem 1rem;
+        /* &:hover {
+          background: $icon-hover-bg;
+        } */
+      }
     }
+  }
 }
-
-
-
