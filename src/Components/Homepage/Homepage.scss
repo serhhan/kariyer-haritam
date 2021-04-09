@@ -72,7 +72,8 @@ header {
     text-indent: 50px;
   }
 
-  button {
+  .button {
+    text-decoration: none;
     padding: 10px 25px;
     border-radius: 30px;
     display: flex;

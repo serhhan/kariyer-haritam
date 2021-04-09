@@ -1,7 +1,7 @@
 import React from "react";
 import Question from "../Question/Question";
 import Options from "../Options/Options";
-
+import { withRouter } from 'react-router-dom';
 import "./QuestionContainer.scss"
 
 const QuestionContainer = ({
@@ -23,4 +23,4 @@ const QuestionContainer = ({
   );
 };
 
-export default QuestionContainer;
+export default withRouter(QuestionContainer);

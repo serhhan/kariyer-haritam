@@ -1,3 +1,37 @@
+$bg-color: linear-gradient(
+  157.61deg,
+  rgba(0, 0, 0, 0.8) 14.53%,
+  rgba(0, 0, 0, 0.3) 89.08%
+);
+$bg-color2: linear-gradient(
+  157.61deg,
+  rgba(255, 255, 255, 0.8) 14.53%,
+  rgba(255, 255, 255, 0.3) 89.08%
+);
+$font-color: white;
+$btn-color: #46457de3;
+$btn-color2: #2dc166b7;
+
+.center{
+    text-align: center;
+}
+button {
+  margin: 0px 30px 0px 30px;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: none;
+  background: $btn-color;
+  color: $font-color;
+  transition: all 100ms ease-out;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid black;
+    border-radius: 50px;
+  }
+}
 .result-texts{
     display:flex;
     flex-direction: row;

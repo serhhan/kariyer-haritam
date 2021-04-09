@@ -1,26 +1,30 @@
 import React from "react";
 import './Navbar.scss';
 import '../../all';
-
-const Navbar = () => {
+import {Link} from 'react-router-dom'
+const Navbar = ({restartFunction}) => {
     return (
     <nav>
        <ul className = "nav-list">
            <li className="nav-item">
-               <a href="#">
+               <Link to="/home" onClick = {restartFunction} >
                    <i class="fas fa-feather-alt fa-3x"></i>
-               </a>
+               </Link>
+           </li>
+           <li className="nav-item" >
+               <Link to="/careermap" onClick = {restartFunction}>
+                   Kariyer Haritası
+                </Link>
            </li>
            <li className="nav-item">
-               <a href="#">Kariyer Haritası</a>
+               <Link to="/aboutus" onClick = {restartFunction}>
+                   Hakkımızda
+                </Link>
            </li>
            <li className="nav-item">
-               <a href="#">Hakkımızda</a>
-           </li>
-           <li className="nav-item">
-               <a href="#">
+                <Link to="/home">
                    <i class="fas fa-home fa-2x"></i>
-               </a>
+                </Link>
            </li>
        </ul>
     </nav>

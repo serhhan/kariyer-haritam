@@ -1,9 +1,7 @@
 import React from "react";
 import cardPhoto from "../assets/serhan.jpeg"
-
+import { withRouter } from 'react-router-dom';
 import './AboutUs.scss';
-
-
 
 const AboutUs = () => {
 
@@ -60,4 +58,4 @@ const AboutUs = () => {
         </div>
     )
 }
-export default AboutUs;
+export default withRouter(AboutUs);

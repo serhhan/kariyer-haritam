@@ -7,6 +7,13 @@ import Results from "./Components/Results/Results";
 import Navbar from "./Components/Navbar/Navbar";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Homepage from "./Components/Homepage/Homepage";
+import{
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom"
 
 function App() {
 
@@ -50,7 +57,7 @@ function App() {
     setSanatPoint(0);
     setMuzikPoint(0);
     setSosyalYardimPoint(0);
-
+    setStartGame(false);
   }
   const handleStartGame = () => {
     setStartGame(!startGame);
@@ -116,34 +123,58 @@ function App() {
     }
   };
   return (
-  <div>
-     <Navbar />
-     <Homepage />
-     <div className ="QuestionArea">
-        {startGame ? "" : <QuestionIndex handleStartGame={handleStartGame} />}
-        {startGame && index < questions.length ? (
-          <QuestionContainer
-            {...questions[index]}
-            handleIndex={handleIndex}
-            index = {index}
-            calculatePoint ={calculatePoint}
-            fields = {fields}
+    <Router> 
+      <Navbar restartFunction = {restartTest}/>
+        <div>
+         <Switch>
+         <Route
+                exact
+                path="/"
+                render={() => {
+                    return (
+                     
+                      <Redirect to="/home" /> 
+                    )
+                }}
           />
-        ) : (
-          ""
-        )}
-      {index === 170 ? <div className="results"> 
-                        <Results  sozelPoint = {sozelPoint} sayisalPoint = {sayisalPoint} 
-                                  uzayPoint = {uzayPoint} gozElKPoint = {gozElKPoint}  fenPoint = {fenPoint}  
-                                  sosyalPoint = {sosyalPoint} iknaPoint = {iknaPoint} dilPoint = {dilPoint}
-                                  ticaretPoint = {ticaretPoint} ziraatPoint = {ziraatPoint} mekanikPoint ={mekanikPoint}  
-                                  isAyrintiPoint = {isAyrintiPoint} edebiyatPoint = {edebiyatPoint}  sanatPoint = {sanatPoint} 
-                                  muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} restartFunction = {restartTest}/>  
-                       </div> : ""}
-                                
-      </div>
-      <AboutUs />
-  </div>
+          <Route path="/home">
+            <Homepage restartFunction = {restartTest} />
+          </Route>
+          <Route path = "/aboutus"> 
+              <AboutUs /> 
+           </Route>
+          <div className ="QuestionArea">
+              {startGame ? "" : <QuestionIndex handleStartGame={handleStartGame} />}
+              {startGame && index < questions.length ? (
+                
+          <Route path = "/careermap">
+                <QuestionContainer
+                  {...questions[index]}
+                  handleIndex={handleIndex}
+                  index = {index}
+                  calculatePoint ={calculatePoint}
+                  fields = {fields}
+                /></Route>
+              ) : (
+                ""
+              )}
+            {index === 170 ? <div className="results"> 
+                              <Results  sozelPoint = {sozelPoint} sayisalPoint = {sayisalPoint} 
+                                        uzayPoint = {uzayPoint} gozElKPoint = {gozElKPoint}  fenPoint = {fenPoint}  
+                                        sosyalPoint = {sosyalPoint} iknaPoint = {iknaPoint} dilPoint = {dilPoint}
+                                        ticaretPoint = {ticaretPoint} ziraatPoint = {ziraatPoint} mekanikPoint ={mekanikPoint}  
+                                        isAyrintiPoint = {isAyrintiPoint} edebiyatPoint = {edebiyatPoint}  sanatPoint = {sanatPoint} 
+                                        muzikPoint = {muzikPoint} sosyalYardimPoint = {sosyalYardimPoint} restartFunction = {restartTest}/>  
+                            </div> : ""}
+                                      
+            </div>
+          
+           <Route path = "/aboutus"> 
+              <AboutUs /> 
+           </Route>
+            </Switch>
+        </div>
+      </Router>
   );
 
 }

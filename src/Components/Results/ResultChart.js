@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
-
+import "./Results.scss";
 /*
 sozelPercentange, sayisalPercentage, uzayPercentage, gozElPercentage,
                     fenPercentage, sosyalPercentage, iknaPercentage, dilPercentage, ticaretPercentage,
@@ -110,6 +110,14 @@ function ResultChart(props) {
                           return chart.colors.getIndex(target.dataItem.index);
                         })
                           chart.exporting.menu = new am4core.ExportMenu();
+                          chart.exporting.menu.items = [{
+                            "label": "Yazdır",
+                            "menu": [
+                              { "type": "png", "label": "PNG" },
+                              // { "type": "json", "label": "JSON" },
+                              { "label": "Print", "type": "print" }
+                            ]
+                          }];
                       }, [])
                       
 

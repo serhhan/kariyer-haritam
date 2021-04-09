@@ -1,12 +1,12 @@
 import React from "react";
 import table from "../../NormTable"
 import ResultChart from "./ResultChart"
-
+import "./Results.scss";
 
 function Results({ sozelPoint, sayisalPoint, uzayPoint, gozElKPoint, fenPoint, sosyalPoint, iknaPoint, dilPoint,
   ticaretPoint, ziraatPoint, mekanikPoint, isAyrintiPoint, edebiyatPoint, sanatPoint, muzikPoint, sosyalYardimPoint, restartFunction }) {
-
-  return (
+    try{
+    return (
     <div>
       <div classname="container">
         
@@ -27,11 +27,26 @@ function Results({ sozelPoint, sayisalPoint, uzayPoint, gozElKPoint, fenPoint, s
                     muzikPercentage = {table[muzikPoint]["MÜZİK"]}
                     sosyalYardimPercentage = {table[sosyalYardimPoint]["SOSYAL YARD."]}/>
 
+      <div className="center">
         <button onClick = {restartFunction}>Başa Dön</button>
+      </div>
       </div>
       
     </div>
   );
 }
 
+catch(error){
+    return(
+    <div>
+      <h1>
+         Lütfen testi daha dikkatli çözünüz......      
+      </h1>
+      <div className="center">
+        <button onClick = {restartFunction}>Başa Dön</button>
+      </div>
+      
+    </div>);
+}
+  }
 export default Results;
